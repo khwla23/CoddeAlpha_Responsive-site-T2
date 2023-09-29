@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+body {
+  background-image: url("images/bg.jpg");
+  background-size: cover;
+}
+.container {
+  max-width: 80vw;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header */
+.navbar li {
+  list-style: none;
+  margin: 0 12px;
+}
+.navbar li:hover {
+  color: purple;
+  cursor: pointer;
+}
+.navbar {
+  display: flex;
+  height: 70px;
+  font-family: "Manrope", sans-serif;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.vav1 {
+  display: flex;
+  justify-content: space-between;
+}
+.c1 {
+  display: flex;
+  align-items: center;
+}
+.c2 {
+  font-weight: bolder;
+  font-size: 2em;
+  color: palevioletred;
+}
+.nav1 {
+  display: flex;
+  justify-content: space-between;
+}
+.toggle-btn {
+  color: #272727;
+  font-size: 2rem;
+  cursor: pointer;
+  padding-top: 15px;
+  display: none;
+}
+
+.btn {
+  padding: 4px 12px;
+  border: 3px solid black;
+  border-radius: 12px;
+  color: azure;
+  background-color: black;
+  transition: scale 0.2 ease;
+}
+.btn:hover {
+  scale: 1.05;
+  color: plum;
+  cursor: pointer;
+}
+.btn:active {
+  scale: 0.95;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+.heading h3 {
+  padding: 10px;
+}
+.heading p {
+  font-size: 3rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 900;
+  color: purple;
+}
+/*Drop Down Menu Start*/
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 3rem;
+  top: 4rem;
+  width: 150px;
+  height: 0;
+  background: rgba(255, 255, 255, 0.342);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu li {
+  padding: 0.3rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown-menu .btn {
+  width: 80%;
+}
+.dropdown-menu.open {
+  height: 180px;
+}
+/*Drop Down Menu END*/
+/*----------Blog-----------*/
+#blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0, 0.5);
+}
+.blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+.blog-box {
+  width: 300px;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  margin: 10px;
+  margin-bottom: 5px;
+}
+#blog .blog-box:hover {
+  transform: translateY(-5px);
+  border-color: #ff689b;
+  box-shadow: 2px 0px 2px 1px palevioletred;
+}
+.blog-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.blog-img img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.blog-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.blog-text span {
+  color: palevioletred;
+  font-size: 1rem;
+}
+.blog-text .blog-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #272727;
+}
+.blog-text .blog-title:hover {
+  color: #f33c3c;
+  transition: all ease 0.3s;
+}
+.blog-text p {
+  color: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clmap: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px 0px;
+}
+.blog-text a:hover {
+  font-weight: 700;
+  color: #5e4e4e;
+  transition: all ease 0.3s;
+}
+
+/*RESPONSIVE DESIGN*/
+@media (max-width: 700px) {
+  .navbar {
+    display: none;
+  }
+  .toggle-btn {
+    display: inline;
+  }
+  .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 350px) {
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
+  .heading {
+    display: block;
+  }
+}

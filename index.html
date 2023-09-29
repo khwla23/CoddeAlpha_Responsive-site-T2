@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>CodeAlpha Blog</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container container-fluid mx-auto">
+      <!-- Header -->
+      <header>
+        <div class="row">
+          <nav class="nav1">
+            <div class="c2 c1">BLOG</div>
+            <ul class="navbar c1">
+              <li>Home</li>
+              <li>My Blog</li>
+              <li>Categories</li>
+              <li>Contact Us</li>
+              <li><button class="btn">Login</button></li>
+            </ul>
+            <div class="toggle-btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </nav>
+
+          <hr />
+        </div>
+
+        <div class="dropdown-menu">
+          <li>Home</li>
+          <li>My Blog</li>
+          <li>Categories</li>
+          <li>Contact Us</li>
+          <li><button class="btn">Login</button></li>
+        </div>
+      </header>
+      <!-- End Header -->
+      <div class="heading">
+        <h3 class="h3">Category:</h3>
+        <p class="display-1">FASHION</p>
+      </div>
+      <!-- blog-Container -->
+      <section id="blog">
+        <div class="blog-container">
+          <!-- Blog1 -->
+          <div class="blog-box">
+            <div class="blog-img">
+              <img class="img-fluid" src="images/b12.jpg" alt="Blog" />
+            </div>
+            <div class="blog-text">
+              <span>21 février 2022 / BY JULIA HOBBS</span>
+              <a href="#" class="blog-title"
+                >The 20 most iconic dresses in cinematic history</a
+              >
+              <p>
+                This is Vogue’s edit of the most-wanted dresses in cinema
+                history.
+              </p>
+
+              <p>
+                From Julie Christie’s electrifying sequin gown in 1975 hit film
+                Shampoo to the Paco Rabanne party dress Audrey Hepburn debuted
+                in Two for the Road (1967), and Julia Roberts’ bow-fronted
+                minidress in Mystic Pizza (1988) — these are the 20 most iconic
+                ...
+              </p>
+              <a
+                href="https://www.vogue.fr/fashion-culture/article/most-iconic-dresses-on-screen-cinema"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <!-- Blog2 -->
+          <div class="blog-box">
+            <div class="blog-img">
+              <img class="img-fluid" src="images/b2.PNG" alt="Blog" />
+            </div>
+            <div class="blog-text" style="padding-top: 40px">
+              <span>25 Sep 2023 / BY MADELINE FASS</span>
+              <a href="#" class="blog-title"
+                >The Vogue Shopping Report: 11 Trends to Incorporate Into Your
+                Fall Outfits</a
+              >
+
+              <p>
+                When designers presented their fall collections earlier this
+                year, several trends were born. Now, ’tis finally the season to
+                see how these fresh ideas are fully ready to be integrated into
+                your fall outfits for 2023. Quiet luxury may have been the
+                buzzword(s) heard round the world and shouted through the
+                multiverse where new ...
+              </p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+          <!-- Blog3 -->
+          <div class="blog-box">
+            <div class="blog-img">
+              <img class="img-fluid" src="images/b3.PNG" alt="Blog" />
+            </div>
+            <div class="blog-text">
+              <span>14 Sep 2023 / BY LAURA JACKSON</span>
+              <a href="#" class="blog-title"
+                >10 Fall Shoe Trends That Are the Definition of Quiet Luxury</a
+              >
+              <p>
+                One thing is for sure this year: A foundation of solid wardrobe
+                essentials is proving more impactful than fashion-forward finds.
+                This return to the classics comes as little surprise given the
+                rise of what we’ve defined as non-trend trends—think subtle
+                striped shirting, anonymous It bags, straight-leg denim, and
+                more. Also known as quiet luxury, ...
+              </p>
+              <a
+                href="https://www.vogue.fr/fashion-culture/article/most-iconic-dresses-on-screen-cinema"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      const toggleBtn = document.querySelector(".toggle-btn");
+      const toggleBtnIcon = document.querySelector(".toggle-btn i");
+      const dropdownMenu = document.querySelector(".dropdown-menu");
+
+      toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle("open");
+
+        const isOpen = dropdownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
